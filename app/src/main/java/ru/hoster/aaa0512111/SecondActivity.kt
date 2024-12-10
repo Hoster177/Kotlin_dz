@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import ru.hoster.aaa0512111.databinding.ActivitySecondBinding
 
+
 class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +24,11 @@ class SecondActivity : AppCompatActivity() {
         val statusi = resources.getStringArray(R.array.statusi)
         val adapter = ArrayAdapter(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,statusi)
 
+        val taskArray = arrayListOf<Achivka>(
+            Achivka("Достижение","12.11.1111"),
+            Achivka("Достижение","12.11.1111"))
+        val adapterTasks = AchivkaAdapter(taskArray)
+
         binding.SP.adapter = adapter
 
         binding.SP.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
@@ -35,6 +41,7 @@ class SecondActivity : AppCompatActivity() {
             }
 
         }
+        binding.RV.adapter = adapterTasks
 
 
 

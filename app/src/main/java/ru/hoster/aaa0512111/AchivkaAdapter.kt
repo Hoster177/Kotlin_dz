@@ -1,35 +1,32 @@
-package ru.hoster.myapplication
+package ru.hoster.aaa0512111
 
-import android.graphics.Bitmap
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import ru.hoster.aaa0512111.Achivka
 
-class AchivkaAdapter(val kittyArray: ArrayList<Achivka>) : RecyclerView.Adapter<AchivkaAdapter.KittyHolder>() {
+class AchivkaAdapter(val taskArray: ArrayList<Achivka>) : RecyclerView.Adapter<AchivkaAdapter.AchivkaHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): KittyHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AchivkaHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        val view = layoutInflater.inflate(R.layout.cardkitty,parent,false)
+        val view = layoutInflater.inflate(R.layout.taskcard,parent,false)
 
-        return KittyHolder(view)
+        return AchivkaHolder(view)
     }
 
-    override fun onBindViewHolder(holder: KittyHolder, position: Int) {
-        val kitty = kittyArray[position]
+    override fun onBindViewHolder(holder: AchivkaHolder, position: Int) {
+        val kitty = taskArray[position]
         holder.nameTV?.text = kitty.name
 
     }
 
     override fun getItemCount(): Int {
-        return kittyArray.size
+        return taskArray.size
     }
 
 
-    inner class KittyHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+    inner class AchivkaHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         var nameTV: TextView? = null
 
         init {
