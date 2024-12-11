@@ -25,9 +25,9 @@ class SecondActivity : AppCompatActivity() {
         val adapter = ArrayAdapter(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,statusi)
 
         val achiveArray = arrayListOf<Achivka>(
-            Achivka("Достижение","12.11.1111"),
-            Achivka("Достижение","12.11.1111"),
-            Achivka("Достижение","12.11.1111"),
+            Achivka("Проснулся","12.11.1111"),
+            Achivka("Позавтракал","12.11.1111"),
+            Achivka("Умылся","12.11.1111"),
             Achivka("Достижение","12.11.1111"))
         val adapterTasks = AchivkaAdapter(achiveArray)
 
@@ -45,7 +45,12 @@ class SecondActivity : AppCompatActivity() {
         }
         binding.RV.adapter = adapterTasks
 
-
-
+        /*<ImageView
+                android:id="@+id/Image2"
+                android:background="@drawable/rectangle"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:onClick="@{() -> viewModel.chooseImage()}" />
+                */
     }
 }
