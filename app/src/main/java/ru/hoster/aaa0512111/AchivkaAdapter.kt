@@ -16,8 +16,9 @@ class AchivkaAdapter(val taskArray: ArrayList<Achivka>) : RecyclerView.Adapter<A
     }
 
     override fun onBindViewHolder(holder: AchivkaHolder, position: Int) {
-        val kitty = taskArray[position]
-        holder.nameTV?.text = kitty.name
+        val achivka = taskArray[position]
+        holder.nameTV?.text = achivka.name
+        holder.dateTV?.text = achivka.date
 
     }
 
@@ -28,9 +29,11 @@ class AchivkaAdapter(val taskArray: ArrayList<Achivka>) : RecyclerView.Adapter<A
 
     inner class AchivkaHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         var nameTV: TextView? = null
+        var dateTV: TextView? = null
 
         init {
             nameTV = itemView.findViewById(R.id.Name)
+            dateTV = itemView.findViewById(R.id.Date)
         }
     }
 }

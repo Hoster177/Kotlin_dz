@@ -24,10 +24,12 @@ class SecondActivity : AppCompatActivity() {
         val statusi = resources.getStringArray(R.array.statusi)
         val adapter = ArrayAdapter(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,statusi)
 
-        val taskArray = arrayListOf<Achivka>(
+        val achiveArray = arrayListOf<Achivka>(
+            Achivka("Достижение","12.11.1111"),
+            Achivka("Достижение","12.11.1111"),
             Achivka("Достижение","12.11.1111"),
             Achivka("Достижение","12.11.1111"))
-        val adapterTasks = AchivkaAdapter(taskArray)
+        val adapterTasks = AchivkaAdapter(achiveArray)
 
         binding.SP.adapter = adapter
 
