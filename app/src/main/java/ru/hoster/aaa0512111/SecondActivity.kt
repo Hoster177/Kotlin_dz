@@ -28,6 +28,9 @@ class SecondActivity : AppCompatActivity() {
             Achivka("Проснулся","12.11.1111"),
             Achivka("Позавтракал","12.11.1111"),
             Achivka("Умылся","12.11.1111"),
+            Achivka("Проснулся","13.11.1111"),
+            Achivka("Проснулся","14.11.1111"),
+            Achivka("Проснулся","15.11.1111"),
             Achivka("Достижение","12.11.1111"))
         val adapterAchive = AchivkaAdapter(achiveArray)
 
@@ -52,5 +55,6 @@ class SecondActivity : AppCompatActivity() {
                 android:layout_height="200dp"
                 android:onClick="@{() -> viewModel.chooseImage()}" />
                 */
+
     }
 }

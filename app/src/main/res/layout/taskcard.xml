@@ -10,12 +10,14 @@
         android:gravity="center_vertical">
         <TextView
             android:layout_weight="1"
+            android:textSize="30dp"
             android:id="@+id/Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="name"/>
         <TextView
             android:layout_weight="1"
+            android:textSize="30dp"
             android:id="@+id/Date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
