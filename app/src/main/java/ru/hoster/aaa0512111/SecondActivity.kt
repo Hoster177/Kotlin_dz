@@ -29,7 +29,7 @@ class SecondActivity : AppCompatActivity() {
             Achivka("Позавтракал","12.11.1111"),
             Achivka("Умылся","12.11.1111"),
             Achivka("Достижение","12.11.1111"))
-        val adapterTasks = AchivkaAdapter(achiveArray)
+        val adapterAchive = AchivkaAdapter(achiveArray)
 
         binding.SP.adapter = adapter
 
@@ -43,7 +43,7 @@ class SecondActivity : AppCompatActivity() {
             }
 
         }
-        binding.RV.adapter = adapterTasks
+        binding.RV.adapter = adapterAchive
 
         /*<ImageView
                 android:id="@+id/Image2"
