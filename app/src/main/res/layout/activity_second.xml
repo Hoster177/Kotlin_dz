@@ -47,27 +47,49 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="300dp">
-        <Spinner
-            android:id="@+id/SP"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content" />
-        <TextView
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_launcher_background"/>
+                <Spinner
+                    android:id="@+id/SP"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="88005553535"
-            android:textSize="20sp"
-            android:textColor="#FF00FF"
-            android:onClick="@{() -> viewModel.clickNumber()}"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="mailru@gmail.com"
-            android:textSize="20sp"
-            android:textColor="#FF00FF"
-            android:onClick="@{() -> viewModel.clickEmail()}"/>
-
-
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_local_phone_24"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="88005553535"
+                android:textSize="20sp"
+                android:textColor="#FF00FF"
+                android:onClick="@{() -> viewModel.clickNumber()}"/>
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_email_24"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="mailru@gmail.com"
+                    android:textSize="20sp"
+                    android:textColor="#FF00FF"
+                    android:onClick="@{() -> viewModel.clickEmail()}"/>
+            </LinearLayout>
     </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
