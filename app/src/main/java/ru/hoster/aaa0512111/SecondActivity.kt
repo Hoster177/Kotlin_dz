@@ -1,5 +1,6 @@
 package ru.hoster.aaa0512111
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
@@ -36,6 +37,10 @@ class SecondActivity : AppCompatActivity() {
         val adapterAchive = AchivkaAdapter(achiveArray)
 
         binding.SP.adapter = adapter
+        binding.Back.setOnClickListener {
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.SP.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
