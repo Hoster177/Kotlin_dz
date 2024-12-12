@@ -44,7 +44,7 @@ class SecondActivity : AppCompatActivity() {
 
         binding.SP.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                /*val i = statusi[p2].toString()
+                /*val i = statusi[p2].toString() ь
                  Toast.makeText(this@SecondActivity,"$i $p2",Toast.LENGTH_SHORT).show()*/
                 if (p2 == 0) {
                     binding.KST.setBackgroundResource(R.color.green)
