@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
@@ -38,6 +39,17 @@ class SecondActivity : AppCompatActivity() {
 
         binding.SP.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                /*val i = statusi[p2].toString()
+                 Toast.makeText(this@SecondActivity,"$i $p2",Toast.LENGTH_SHORT).show()*/
+                if (p2 == 0) {
+                    binding.KST.setBackgroundResource(R.color.green)
+                }
+                else if (p2 == 1) {
+                    binding.KST.setBackgroundResource(R.color.orange)
+                }
+                else if (p2 == 2) {
+                    binding.KST.setBackgroundResource(R.color.red)
+                }
 
             }
 
